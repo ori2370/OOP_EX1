@@ -1,3 +1,5 @@
+package observer;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Stack;
@@ -17,7 +19,7 @@ public class UndoableStringBuilder {
         last.push(new StringBuilder(str));
     }
 
-    /***
+    /**
      * Appends the specified string to this character sequence.
      * @param   str   the {@code StringBuffer} to append.
      * @return a reference to this object.
@@ -29,7 +31,7 @@ public class UndoableStringBuilder {
         return this;
     }
 
-    /***
+    /**
      * Removes the characters in a substring of this sequence. The substring begins
      * at the specified start and extends to the character at index
      * end - 1 or to the end of the sequence if no such character exists.
@@ -59,7 +61,7 @@ public class UndoableStringBuilder {
         return this;
     }
 
-    /***
+    /**
      * Inserts the string into this character sequence.
      * @param      offset   the offset.
      * @param      str      a string.
@@ -85,7 +87,7 @@ public class UndoableStringBuilder {
         return this;
     }
 
-    /***
+    /**
      * Replaces the characters in a substring of this sequence with characters in
      * the specified String. The substring begins at the specified start and
      * extends to the character at index end - 1 or to the end of the sequence if
@@ -115,7 +117,7 @@ public class UndoableStringBuilder {
         return this;
     }
 
-    /***
+    /**
      * Causes this character sequence to be replaced by the reverse of the
      * sequence.
      * @return a reference to this object.
@@ -127,7 +129,7 @@ public class UndoableStringBuilder {
         return this;
     }
 
-    /***
+    /**
      * reverts the last operation done on the StringBuilder object
      */
     public void undo() {
