@@ -21,7 +21,8 @@ public class UndoableStringBuilder {
 
     /**
      * Appends the specified string to this character sequence.
-     * @param   str   the {@code StringBuffer} to append.
+     *
+     * @param str the {@code StringBuffer} to append.
      * @return a reference to this object.
      */
     public UndoableStringBuilder append(String str) {
@@ -36,6 +37,7 @@ public class UndoableStringBuilder {
      * at the specified start and extends to the character at index
      * end - 1 or to the end of the sequence if no such character exists.
      * If start is equal to end, no changes are made.
+     *
      * @param start
      * @param end
      * @return a reference to this object.
@@ -57,14 +59,14 @@ public class UndoableStringBuilder {
             e.printStackTrace();
 
         }
-        last.push(current);
         return this;
     }
 
     /**
      * Inserts the string into this character sequence.
-     * @param      offset   the offset.
-     * @param      str      a string.
+     *
+     * @param offset the offset.
+     * @param str    a string.
      * @return a reference to this object.
      */
     public UndoableStringBuilder insert(int offset, String str) {
@@ -94,9 +96,10 @@ public class UndoableStringBuilder {
      * no such character exists. First the characters in the substring are removed
      * and then the specified String is inserted at start. (This sequence will be
      * lengthened to accommodate the specified String if necessary).
-     * @param      start    The beginning index, inclusive.
-     * @param      end      The ending index, exclusive.
-     * @param      str   String that will replace previous contents.
+     *
+     * @param start The beginning index, inclusive.
+     * @param end   The ending index, exclusive.
+     * @param str   String that will replace previous contents.
      * @return a reference to this object.
      */
     public UndoableStringBuilder replace(int start, int end, String str) {
@@ -120,6 +123,7 @@ public class UndoableStringBuilder {
     /**
      * Causes this character sequence to be replaced by the reverse of the
      * sequence.
+     *
      * @return a reference to this object.
      */
     public UndoableStringBuilder reverse() {

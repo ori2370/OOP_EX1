@@ -3,14 +3,26 @@ package observer;
 import java.util.ArrayList;
 
 /**
- *
+ * The GroupAdmin class maintains an Arraylist of Observers(clients) and provides methods
+ * for adding and removing them, as well as for notifying them when
+ * the state of the UndoableStringBuilder changes.
  */
 public class GroupAdmin implements Sender {
     private ArrayList<Member> clients = new ArrayList<>();
-    private UndoableStringBuilder usb;
+    private UndoableStringBuilder usb = new UndoableStringBuilder();
+
+    public UndoableStringBuilder getUsb() {
+        return usb;
+    }
+
+    public ArrayList<Member> getClients() {
+        return clients;
+    }
 
     /**
-     * @param obj
+     * this function adding an object(Member) that utilize as an observer into our ArrayList of clients
+     *
+     * @param obj this object will be an observer
      */
     @Override
     public void register(Member obj) {
@@ -18,7 +30,9 @@ public class GroupAdmin implements Sender {
     }
 
     /**
-     * @param obj
+     * this function removing the object(Member) that utilize as an observer from our ArrayList of clients
+     *
+     * @param obj the observer that we want to remove
      */
     @Override
     public void unregister(Member obj) {
@@ -26,8 +40,11 @@ public class GroupAdmin implements Sender {
     }
 
     /**
-     * @param offset
-     * @param obj
+     * Inserts the string into this character sequence of our client(observer-Member)
+     *
+     * @param offset the offset.
+     * @param obj    a string.
+     * @return a reference to this object.
      */
     @Override
     public void insert(int offset, String obj) {
@@ -48,8 +65,14 @@ public class GroupAdmin implements Sender {
     }
 
     /**
+     * Removes the characters in a substring of this UndoableStringBuilder object. The substring begins
+     * at the specified start and extends to the character at index
+     * end - 1 or to the end of the sequence if no such character exists.
+     * If start is equal to end, no changes are made.
+     *
      * @param start
      * @param end
+     * @return a reference to this object.
      */
     @Override
     public void delete(int start, int end) {
@@ -58,7 +81,7 @@ public class GroupAdmin implements Sender {
     }
 
     /**
-     *
+     * reverts the last operation done on the UndoableStringBuilder Client(observer)
      */
     @Override
     public void undo() {
@@ -67,7 +90,7 @@ public class GroupAdmin implements Sender {
     }
 
     /**
-     *
+     * a for-each loop that goes through our database of clients and notify them of any changes happened.
      */
     public void notifyObservers() {
         for (Member member : clients) {
