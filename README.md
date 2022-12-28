@@ -9,7 +9,7 @@ observers, and notifies them when any state changes, usually by calling one of t
 
 ## Table of Contents
 
-- [How the Program Works](#How the Program Works)
+- [How the Program Works](#How-the-Program-Works)
 - [Prerequisites](#prerequisites)
 - [Installing](#installing)
 - [Usage](#usage)
