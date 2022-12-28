@@ -81,7 +81,7 @@ private final String name:
 granting the ability to name each observer(ConcreteMember) so it'll be easier to identify 
 ```
 
-#### ConcreteMember Methods(Implemented From 'Sender' Interface)
+#### ConcreteMember Methods(Implemented From 'Member' Interface)
 
 ```
 update(UndoableStringBuilder usb):
