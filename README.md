@@ -13,9 +13,7 @@ observers, and notifies them when any state changes, usually by calling one of t
 - [Prerequisites](#prerequisites)
 - [Installing](#installing)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+
 
 ## How the Program Works
 
