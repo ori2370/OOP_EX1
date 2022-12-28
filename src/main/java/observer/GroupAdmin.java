@@ -40,7 +40,7 @@ public class GroupAdmin implements Sender {
     }
 
     /**
-     * Inserts the string into this character sequence of our client(observer-Member)
+     * Inserts the string into this UndoableStringBuilder of our client(observer-Member)
      *
      * @param offset the offset.
      * @param obj    a string.
@@ -53,8 +53,8 @@ public class GroupAdmin implements Sender {
     }
 
     /**
-     * Appends the specified string to this character sequence and updates it to
-     * our clients database (Observer)
+     * Appends the specified string to this UndoableStringBuilder and updates it to
+     * our clients database (Observers)
      *
      * @param obj the {@code StringBuffer} to append.
      */
